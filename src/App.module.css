@@ -8,3 +8,14 @@
     gap: 2rem;
     align-items: flex-start;
 }
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 87.5%; /* como utilizamos a unidade de medida em rem, aplicar porcentagem quando é mobile para o tamanho da fonte ficar proporcional.*/
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
