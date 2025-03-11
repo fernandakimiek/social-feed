@@ -10,32 +10,40 @@ const posts = [
   {
     id: 1,
     author: {
-      avatarUrl: 'https://avatars.githubusercontent.com/u/45239448?v=4',
-      name: 'Fernanda Kimie',
-      role: 'Desenvolvedora Web'
+      avatarUrl:
+        "https://i.pinimg.com/736x/27/37/df/2737df777c77ec625810d903d2ee98e1.jpg",
+      name: "Junior Avatar",
+      role: "Desenvolvedor",
     },
     content: [
-      {type: 'paragraph', content: 'Fala galeraa 👋'},
-      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      {type: 'link', content: 'jane.design/doctorcare'}
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Estou criando um novo projeto, acessem meu link e me dêem feedbacks!🚀",
+      },
+      { type: "link", content: "github.com/junior.avatar" },
     ],
-    publishedAt: new Date('2025-02-26 20:00:00')
+    publishedAt: new Date("2025-02-26 20:00:00"),
   },
   {
     id: 2,
     author: {
-      avatarUrl: 'https://avatars.githubusercontent.com/u/47476228?v=4',
-      name: 'Cristian Berti',
-      role: 'Desenvolvedor Senior'
+      avatarUrl:
+        "https://play-lh.googleusercontent.com/2-Mw1u0zRRb8bbe-AQe_MPIMqk_8MBT9ojoVZL3FER0HAYwJpq6KW4Ebg3AYbuS0dw",
+      name: "Ayaka",
+      role: "Desenvolvedora Senior",
     },
     content: [
-      {type: 'paragraph', content: 'Fala galeraa 👋'},
-      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      {type: 'link', content: 'jane.design/doctorcare'}
+      { type: "paragraph", content: "Hello!!" },
+      {
+        type: "paragraph",
+        content: "Tenham um excelente diaaa!",
+      },
     ],
-    publishedAt: new Date('2025-02-10 20:00:00')
-  }
-]
+    publishedAt: new Date("2025-02-10 20:00:00"),
+  },
+];
 
 function App() {
   return (
@@ -45,18 +53,16 @@ function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-        {
-          posts.map(post => {
-           return (
-           <Post
-           key={post.id}
-           author={post.author}
-           content={post.content}
-           publishedAt={post.publishedAt}
-           />
-          )
-          })
-        }
+          {posts.map((post) => {
+            return (
+              <Post
+                key={post.id}
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            );
+          })}
         </main>
       </div>
     </>
